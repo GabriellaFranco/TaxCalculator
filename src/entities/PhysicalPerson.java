@@ -31,7 +31,10 @@ public class PhysicalPerson extends Person{
 		
 		if (healthExpenses > 0) {
 			fullTax = fullTax - (healthExpenses * 0.50);
-			return  fullTax;
+		}
+		
+		if (fullTax < 0) {
+			fullTax = 0;
 		}
 		
 		return fullTax;
